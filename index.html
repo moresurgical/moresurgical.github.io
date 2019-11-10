@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoreSurgical Official Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="style.css" rel="stylesheet">
+
+  <style>
+    
+      /* Make the image fully responsive */
+      .carousel-inner img {
+          width: 100%;
+          height: 100%;
+      }
+
+      .carousel-item {
+  height: 500px;
+}
+
+.carousel-item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+      html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+}
+.navbar {
+padding: .8rem;
+}
+
+.navbar-nav li{
+padding-right: 10px;
+}
+
+
+.nav-link {
+  font-size: 1.1em !important; 
+}
+
+
+
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel-caption h1 {
+  font-size: 400%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 50px #000;
+}
+.carousel-caption h3 {
+font-size: 200%;
+font-weight: 500;
+text-shadow: 1px 1px 1px 10px #000;
+padding-bottom: 1rem;
+}
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #6648b1;
+}
+.btn-primary:hover{
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
+}
+.jumbotron{
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding{
+padding-bottom: 1rem;
+}
+
+
+.welcome {
+width: 75%;
+margin: 0 auto;
+padding-top: 2rem;
+}
+
+.welcome hr {
+border-top: 2px solid #b4b4b4;
+width: 95%;
+margin-top: .3rem;
+margin-bottom : 1rem;
+}
+.social a {
+  font-size: 2.5em;
+  padding: .8rem
+
+}
+.fa-facebook{
+  color: #3b5998;
+}
+.fa-twitter {
+color: #00aced;
+}
+.fa-google-plus-g {
+  color: #dd4b39
+}
+.fa-instagram {
+  color: #517fa4;
+}
+.fa-youtube {
+  color: #bb0000;
+}
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+color: #d5d5d5;
+}
+footer {
+background-color: #3f3f3f;
+color :#d5d5d5;
+padding-top: 2rem;
+}
+ hr.light {
+   border-top: 1px solid #d5d5d5;
+   width: 75%;
+   margin-top: .8rem;
+   margin-bottom: 1rem ;
+ }
+
+
+      </style>
+</head>
+<body>
+<!----Navigation-->
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+<div class="container-fluid">
+  <a class="navbar-brand" href="#"><img src="img/pic0.jpg" class="img-responsive" style="width:250px;"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+<!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link " href="#"><i class="fa fa-fw fa-home"></i>   Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Services</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Follow us</a>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Contact us</a>
+        </li>
+    </ul>
+  </div>
+</div>
+</nav>
+<!--image slider-->
+<div id="slides" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#slide" data-slide-to="0" class="active"></li>
+    <li data-target="#slide" data-slide-to="1"></li>
+    <li data-target="#slide" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active" width="1100" height="100">
+      <img src="img/pic4.jpg">
+       <div class="carousel-caption">
+         <h1 class="display-2">MoreSurgical</h1>
+         <h3>Welcome to MoreSurgical website</h3>
+         <!--<button type="button" class="btn btn-outline-light btn-lg"> View Demo
+          </button>
+          <button type="button" class="btn btn-primary btn-lg"> Get Started
+            </button> -->
+       </div>
+  </div>
+  <div class="carousel-item" width="1100" height="100">
+      <img src="img/pic5.jpg">
+  </div>
+  <div class="carousel-item" width="1100" height="100">
+      <img src="img/pic3.jpg">
+  </div>
+</div>
+   <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#slide" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#slide" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a> 
+
+</div>
+
+<!--jumbotron-->
+<div class="container-fluid">
+<div class ="row jumbotron">
+  <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
+    <p class="lead">
+        MoreSurgical is India’s first concept store focused exclusively for rehabilitation, mobility, and home healthcare products and services.
+        We aim to provide the customer a complete experience about solutions to health challenges and thereby educating them about various ways to solve their problems.
+        We work with various international brands and NGOs to provide the best class service for those who are challenged.
+        Our portfolio include: mobility solutions, home healthcare, pediatric and special needs children care products, elderly and assisted daily living products, mother and baby care products, diabetics and orthopedic solutions, hospital and surgical supplies, and respiratory care.
+    </p>
+ </div>
+ <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+   <a href="#"><button type="button" class="btn btn-outline-secondary btn-lg">Read More</button></a>
+ </div>
+</div>
+</div>
+
+<!--welcome section-->
+<div class="container-fluid padding">
+<div class=="row welcome text-center">
+    <div class="col-12">
+      <h1 class="display-4">Built with Ease</h1>
+    </div>
+    <hr>
+    <div class="col-12">
+      <p class="lead">Welcome to our Official website !
+        More Surgical is is India’s first concept store focused exclusively for rehabilitation, mobility, and 
+        home healthcare products and services.
+      </p>
+    </div>
+</div>
+</div>
+
+<!--three column section-->
+<div class="container-fluid padding">
+<div class="row text-center padding">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <i class="fas fa-code"></i>
+    <h3>HTML5</h3>
+    <p>Built with latest version of HTML5</p>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+      <i class="fas fa-bold"></i>
+      <h3>CSS</h3>
+      <p>Built with latest version of HTML5</p>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <i class="fas fa-bold"></i>
+        <h3>JAVA</h3>
+        <p>Built with latest version of HTML5</p>
+      </div>
+</div>
+</div>
+
+
+<!--two column section-->
+<div class="container-fluid padding">
+  <div class= "row padding">
+    <div class="col-lg-6">
+      <h2>About Us</h2>
+      <hr>
+      <p>We work with various international brands and NGOs to provide the best class service for those who 
+        are challenged.</p>
+      <p>Our portfolio include: mobility solutions, home healthcare, pediatric and special needs children care products, elderly and assisted daily living products, mother and baby care products, 
+        diabetics and orthopedic solutions, hospital and surgical supplies, and respiratory care.</p>
+      <br>
+      <a href="#" class="btn btn-primary">Learn More</a>
+    </div>
+    <div class="col-lg-6">
+      <img src="img/pic5.jpg" class="img-fluid">
+
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<!--fixed background-->
+<figure>
+  <div class="fixed-wrap">
+    <div id="fixed">
+    </div>
+    </div>
+</figure>
+
+<!--emoji section-->
+<button class="fun" data-toggle="collapse" data-target="#newsEvent">Click here for News & Events</button>
+<div id="newsEvent" class="collapse">
+<div class="container-fluid padding">
+<div class="row text-center">
+  <div class="col-sm-6 col-md-3">
+    <img src="img/pic9.jpg" class="img-fluid" >
+  </div>
+  <div class="col-sm-6 col-md-3">
+      <img src="img/pic8.jpg" class="img-fluid" >
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <img src="img/pic9.jpg" class="img-fluid" >
+      </div>
+      <div class="col-sm-6 col-md-3">
+          <img src="img/pic9.jpg" class="img-fluid" >
+        </div>
+</div>
+</div>
+</div>
+<hr>
+
+<!--meet the team-->
+<div class="container-fluid padding">
+  <div class="row welcome text-left">
+    <div class="col-12">
+      <h2>Our Services</h2>
+    </div>
+    <hr>
+  </div>
+</div>
+
+<!--cards-->
+<div class="container-fluid padding">
+<div class="row padding">
+  <div class="col-md-4">
+    <div class="card">
+      <img class="card-img-top" src="img/pic3.jpg">
+      <div class="card-body">
+        <h4 class="card-title">Madhuri Singh</h4>
+        <a href="#" class="btn btn-outline-secondary">Visit</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="img/pic3.jpg">
+        <div class="card-body">
+          <h4 class="card-title">Madhuri Singh</h4>
+          <a href="#" class="btn btn-outline-secondary">Visit</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+          <img class="card-img-top" src="img/pic3.jpg">
+          <div class="card-body">
+            <h4 class="card-title">Madhuri Singh</h4>
+            <a href="#" class="btn btn-outline-secondary">Visit</a>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+
+<!--two column section-->
+
+
+
+<!--connect-->
+<div class="container-fluid padding">
+  <div class="row text-center padding">
+    <div class="col-12">
+      <h2>Follow us </h2>
+    </div>
+     <div class="col-12 social padding">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-google-plus-g"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>>
+</div>
+  
+<!--footer-->
+<footer>
+  <div class="container-fluid padding">
+  <div class="row text-center">
+    <div class="col-md-4">
+      <img src="img/pic0.jpg" class="img-responsive" style="width:250px;">
+      <hr class="light">
+        <p>+91-896315789</p>
+        <p>madhursingh014@gmail.com</p>
+        <p>Shrachi Greenwood Elements</p>
+        <p>Rajarhat, Kolkata, West Bengal</p>
+    </div>
+    <div class="col-md-4">
+        <hr class="light">
+        <h5>Our Hours</h5>
+        <hr class="light">
+          <p>Monday -Friday: 9am-5pm</p>
+          <p>Saturday: 10am-4pm</p>
+          <p>Sunday: Closed</p>
+      </div>
+      <div class="col-md-4">
+          <hr class="light">
+          <h5>Service Area</h5>
+          <hr class="light">
+          <p>Rajarhat, Kolkata, West Bengal</p>
+          <p>Bankk More, Dhanbad, Jharkhand</p>
+          <p>Park Street, Kolkata, West Bengal</p>
+        </div>
+        <div class="col-12">
+          <hr class="light">
+          <h5>&copy; moresurgical.com</h5>
+        </div>
+  </div>
+  </div>
+    
+</footer>
+ 
+
+</body>
+</html>
