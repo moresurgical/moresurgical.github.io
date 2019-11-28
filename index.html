@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>MoReSurgical</title>
+<title>MoReSurgicals</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Health medical template project">
@@ -28,7 +28,8 @@
 				<button class="menu_search_button"><i class="fa fa-search" aria-hidden="true"></i></button>
 			</form>
 			<ul>
-				<li class="menu_item"><a href="index.html">Home</a></li>
+			    <li class="menu_item"><a href="index.html">  icon</a></li>
+				<li class="menu_item"><a href="index.html">  Home</a></li>
 				<li class="menu_item"><a href="#">About us</a></li>
 				<li class="menu_item"><a href="#">Services</a></li>
 				<li class="menu_item"><a href="news.html">News</a></li>
@@ -50,8 +51,27 @@
 	<!-- Home -->
 
 	<div class="home">
-		<div class="background_image" style="background-image:url(images/index_hero.jpg)"></div>
-
+		<!--<div class="background_image" style="background-image:url(images/index_hero.jpg)"></div> -->
+		<div id="slides" class="carousel slide" data-ride="carousel">
+				<ul class="carousel-indicators">
+				  <li data-target="#slide" data-slide-to="0" class="active"></li>
+				  <li data-target="#slide" data-slide-to="1"></li>
+				  <li data-target="#slide" data-slide-to="2"></li>
+				</ul>
+				<div class="carousel-inner">
+				  <div class="carousel-item active" width="900" height="100">
+					<img src="images/index_hero.jpg">
+					 <div class="carousel-caption">
+					 </div>
+				</div>
+				<div class="carousel-item" width="900" height="100">
+					<img src="images/index_hero.jpg">
+				</div>
+				<div class="carousel-item" width="900" height="100">
+					<img src="images/index_hero.jpg">
+				</div>
+			  </div>
+			  </div>
 		<!-- Header -->
 
 		<header class="header" id="header">
@@ -62,7 +82,7 @@
 							<div class="col">
 								<div class="header_top_content d-flex flex-row align-items-center justify-content-start">
 									<div class="logo">
-										<a href="#">MoRe Surgical<span>+</span></a>	
+										<a href="#">MoRe Surgicals<span>+</span></a>	
 									</div>
 									<div class="header_top_extra d-flex flex-row align-items-center justify-content-start ml-auto">
 										<div class="header_top_nav">
@@ -92,7 +112,8 @@
 										<div class="header_nav_content d-flex flex-row align-items-center justify-content-start">
 											<nav class="main_nav">
 												<ul class="d-flex flex-row align-items-center justify-content-start">
-													<li class="active"><a href="index.html">Home</a></li>
+													
+													<li class="active"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
 													<li><a href="about.html">About Us</a></li>
 													<li><a href="services.html">Services</a></li>
 													<li><a href="news.html">News</a></li>
@@ -120,7 +141,7 @@
 				<div class="row">
 					<div class="col">
 						<div class="home_content">
-							<div class="home_title">Medical Services that you can trust</div>
+							<div class="home_title">Mobility, Orthosis and Rehabilitation Experience</div>
 							<div class="home_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien.</div>
 							<div class="button home_button"><a href="#"><span>read more</span><span>read more</span></a></div>
 						</div>
@@ -205,7 +226,7 @@
 	</div>
 
 	<!-- Services -->
-
+<!--
 	<div class="services">
 		<div class="container">
 			<div class="row">
@@ -216,7 +237,8 @@
 			</div>
 			<div class="row icon_boxes_row">
 				
-				<!-- Icon Box -->
+				<!-- Icon Box --> 
+				<!--
 				<div class="col-xl-4 col-lg-6">
 					<div class="icon_box">
 						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
@@ -225,9 +247,10 @@
 						</div>
 						<div class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem maximus malesuada lorem maximus mauris.</div>
 					</div>
-				</div>
+				</div> 
 
 				<!-- Icon Box -->
+				<!--
 				<div class="col-xl-4 col-lg-6">
 					<div class="icon_box">
 						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
@@ -239,6 +262,7 @@
 				</div>
 
 				<!-- Icon Box -->
+				<!--
 				<div class="col-xl-4 col-lg-6">
 					<div class="icon_box">
 						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
@@ -250,6 +274,7 @@
 				</div>
 
 				<!-- Icon Box -->
+				<!--
 				<div class="col-xl-4 col-lg-6">
 					<div class="icon_box">
 						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
@@ -261,6 +286,7 @@
 				</div>
 
 				<!-- Icon Box -->
+				<!--
 				<div class="col-xl-4 col-lg-6">
 					<div class="icon_box">
 						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
@@ -272,6 +298,7 @@
 				</div>
 
 				<!-- Icon Box -->
+				<!--
 				<div class="col-xl-4 col-lg-6">
 					<div class="icon_box">
 						<div class="icon_box_title_container d-flex flex-row align-items-center justify-content-start">
@@ -297,7 +324,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_title">Our Departments</div>
+					<div class="section_title">Our Services</div>
 					<div class="section_subtitle">to choose from</div>
 				</div>
 			</div>
@@ -477,7 +504,7 @@
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
 							<div class="logo">
-								<a href="#">MoReSurgical<span>+</span></a>	
+								<a href="#">MoRe Surgicals<span>+</span></a>	
 							</div>
 							<div class="footer_about_text">Lorem ipsum dolor sit amet, lorem maximus consectetur adipiscing elit. Donec malesuada lorem maximus mauris.</div>
 							<div class="footer_social">
@@ -491,7 +518,7 @@
 								</ul>
 							</div>
 							<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by  <a href="https://MoReSurgical.com" target="_blank">MoReSurgicals</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 </div>
 						</div>

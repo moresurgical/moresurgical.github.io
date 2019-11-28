@@ -378,7 +378,7 @@ section
 	color: #404040;
 	font-size: 24px;
 	font-weight: 700;
-	text-transform: uppercase;
+	--text-transform: uppercase;
 }
 .logo a span
 {
@@ -493,7 +493,7 @@ section
 	font-weight: 600;
 	color: #FFFFFF;
 	z-index: 1;
-	text-transform: uppercase;
+    text-transform: uppercase;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
