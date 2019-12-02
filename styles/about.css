@@ -353,8 +353,7 @@ section
 .header.scrolled
 {
 	position: fixed;
-	top: -91px;
-	left: 0;
+	
 }
 .header_top
 {
@@ -922,6 +921,52 @@ section
 	color: #c1c1c1;
 	margin-top: 12px;
 	line-height: 1.2;
+}
+/*********************************
+7. Boxes
+*********************************/
+
+.boxes
+{
+	width: 100%;
+}
+.box
+{
+	width: calc(100% / 3);
+	padding-top: 79px;
+	padding-left: 90px;
+	padding-bottom: 64px;
+	padding-right: 30px;
+}
+.box_title
+{
+	font-size: 30px;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 1.2;
+}
+.box_subtitle
+{
+	font-size: 11px;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	line-height: 0.75;
+	margin-top: 16px;
+	padding-left: 1px;
+}
+.box_text
+{
+	margin-top: 60px;
+	font-size: 14px;
+	font-weight: 500;
+	color: rgba(255,255,255,0.66);
+	line-height: 2.14;
+	padding-left: 3px;
+}
+.box_button
+{
+	margin-top: 77px;
 }
 
 /*********************************
