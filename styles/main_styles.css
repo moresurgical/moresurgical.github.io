@@ -1696,3 +1696,16 @@ section
 	font-size: 20px;
 	color: #32c69a;
 }
+.bs-example{
+	
+	display: block;
+	position: relative;
+	height: 100%;
+	font-size: 13px;
+	font-weight: 600;
+	color: #FFFFFF;
+	
+    text-transform: uppercase;
+
+	
+}
