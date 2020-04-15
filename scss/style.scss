@@ -1725,22 +1725,28 @@ textarea.form-control {
 				a{
 					color: $white;
 				}
+			
 			}
 		}
+
 	}
 	.category-wrap-2{
 		width: 100%;
 		.text{
-			width: 100%;
+			background: $primary;
 			h2{
-				color: $primary;
-				font-family: $font-secondary;
-				font-style: italic;
-				font-size: 24px;
+				font-size: 18px;
+				font-family: $font-primary;
+				a{
+					color: $white;
+					background-color: $primary;
+				}
 			}
 		}
 	}
 }
+
+
 
 //TESTIMONY
 .testimony-section{
@@ -2394,6 +2400,62 @@ textarea.form-control {
 		}
 	}
 }
+//single -product image
+.preview-pic {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+}
+
+.preview-thumbnail.nav-tabs {
+	border: none;
+	margin-top: 15px;
+}
+
+.preview-thumbnail.nav-tabs li {
+	width: 24%;
+	margin: 0 0.3%;
+}
+
+.preview-thumbnail.nav-tabs li img {
+	max-width: 100%;
+	display: block;
+}
+
+.preview-thumbnail.nav-tabs li a {
+	padding: 0;
+	margin: 0;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+}
+
+.preview-thumbnail.nav-tabs li:last-of-type {
+	margin-right: 0;
+}
+
+.tab-content {
+	overflow: hidden;
+}
+
+.preview-pic.tab-content {
+	border: 3px solid #ddd;
+	width: 99%;
+	margin: 0.5%;
+}
+
+.tab-content img {
+	width: 100%;
+	-webkit-animation-name: opacity;
+	animation-name: opacity;
+	-webkit-animation-duration: .3s;
+	animation-duration: .3s;
+}
+
+.preview-thumbnail.nav-tabs li.active a {
+	border: 3px solid #01b888;
+}
+
 
 //PRODUCTS SIDEBAR
 .sidebar-box-2{
@@ -2420,7 +2482,10 @@ textarea.form-control {
 		}
 	}
 }
-
+// map 
+#map {
+	height: 100%;
+  }
 
 #ftco-loader {
 	position: fixed;

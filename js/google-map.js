@@ -1,62 +1,62 @@
+// In the following example, markers appear when the user clicks on the map.
+// Each marker is labeled with a single alphabetical character.
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
 
-var google;
+function initialize() {
+  var bangalore = { lat: 12.97, lng: 77.59 };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: bangalore
+  });
 
-function init() {
-    // Basic options for a simple Google Map
-    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-    // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
-    // 39.399872
-    // -8.224454
-    
-    var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
-        zoom: 7,
+  // This event listener calls addMarker() when the map is clicked.
+  google.maps.event.addListener(map, 'click', function(event) {
+    addMarker(event.latLng, map);
+  });
 
-        // The latitude and longitude to center the map (always required)
-        center: myLatlng,
-
-        // How you would like to style the map. 
-        scrollwheel: false,
-        styles: [
-            {
-                "featureType": "administrative.country",
-                "elementType": "geometry",
-                "stylers": [
-                    {
-                        "visibility": "simplified"
-                    },
-                    {
-                        "hue": "#ff0000"
-                    }
-                ]
-            }
-        ]
-    };
-
-    
-
-    // Get the HTML DOM element that will contain your map 
-    // We are using a div with id="map" seen below in the <body>
-    var mapElement = document.getElementById('map');
-
-    // Create the Google Map using out element and options defined above
-    var map = new google.maps.Map(mapElement, mapOptions);
-    
-    var addresses = ['New York'];
-
-    for (var x = 0; x < addresses.length; x++) {
-        $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
-            var p = data.results[0].geometry.location
-            var latlng = new google.maps.LatLng(p.lat, p.lng);
-            new google.maps.Marker({
-                position: latlng,
-                map: map,
-                icon: 'images/loc.png'
-            });
-
-        });
-    }
-    
+  // Add a marker at the center of the map.
+  addMarker(bangalore, map);
 }
-google.maps.event.addDomListener(window, 'load', init);
+
+// Adds a marker to the map.
+function addMarker(location, map) {
+  // Add the marker at the clicked location, and add the next-available label
+  // from the array of alphabetical characters.
+  var marker = new google.maps.Marker({
+    position: location,
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+}
+var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var labelIndex = 0;
+
+function initialize() {
+  var bangalore = { lat: 12.97, lng: 77.59 };
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: bangalore
+  });
+
+  // This event listener calls addMarker() when the map is clicked.
+  google.maps.event.addListener(map, 'click', function(event) {
+    addMarker(event.latLng, map);
+  });
+
+  // Add a marker at the center of the map.
+  addMarker(bangalore, map);
+}
+
+// Adds a marker to the map.
+function addMarker(location, map) {
+  // Add the marker at the clicked location, and add the next-available label
+  // from the array of alphabetical characters.
+  var marker = new google.maps.Marker({
+    position: location,
+    label: labels[labelIndex++ % labels.length],
+    map: map
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
