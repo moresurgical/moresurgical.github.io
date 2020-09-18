@@ -1,39 +1,78 @@
 $(document).ready(function() {
 
     // Variable Json keeping all product informmation 
-    var image_list = {
-        "productF": ['product-1.jpeg', 'product-2.jpg', 'product-3.jpg', 'product-5.jpg'],
-        "cakes": ['c1.jpg', 'c2.jpg', 'c3.jpg', 'c4.jpg', 'c5.jpg'],
-        "plane": ['p1.jpg', 'p2.jpg', 'p3.jpg', 'p4.jpg', 'p5.jpg'],
-        "toys": ['t1.jpg', 't2.jpg', 't3.jpg', 't4.jpg', 't5.jpg'],
-    }
+    var rental_img = {
+        "RENTAL-1": ['120.00', '80.00', 'RENT-1.jpg', 'RENT-2.jpg', 'RENT-3.jpg', 'RENT-4.jpg'],
+        "RENTAL-2": ['130.00', '90.00', 'RENT-6.jpg', 'RENT-7.jpg', 'RENT-8.jpg', 'RENT-10.jpg'],
+        "RENTAL-3": ['10.00', '8.00', 'RENT-11.jpg', 'RENT-12.jpg', 'RENT-13.jpg', 'RENT-14.jpg'],
+        "RENTAL-4": ['220.00', '180.00', 'RENT-16.jpg', 'RENT-17.jpg', 'RENT-18.jpg', 'RENT-19.jpg'],
+    };
 
     var product_name = getSearchParams("product");
-    var product_list = image_list[product_name];
+    var product_details = rental_img[product_name];
+    var product_list = product_details.slice(3);
+
+    console.log(product_name, product_details, product_list);
 
     // clear the div 
     $("#image-list").html("");
+    $("#thumbnail-list").html("");
+
+    //sample product card with placeholders
+    var image_div = `
+    <div class="tab-pane active show" id="PRODUCT_ID">
+    <a href="PRODUCT_URL" class="image-popup">
+        <img src="PRODUCT_URL" class="img-fluid" alt="Colorlib Template"> </a>
+    </div>
+    `;
+
+    var thumbnail_div = `
+    <li class="active">
+        <a data-target="#PRODUCT_ID" data-toggle="tab"><img src="PRODUCT_URL" alt="#" /></a>
+    </li>
+    `;
+
+    // replacing values inside sample product card
+    image_div = image_div.replace(/PRODUCT_ID/g, product_details[3]);
+    image_div = image_div.replace(/PRODUCT_URL/g, "images/products/" + product_details[3]);
+
+    thumbnail_div = thumbnail_div.replace(/PRODUCT_ID/g, product_details[3]);
+    thumbnail_div = thumbnail_div.replace(/PRODUCT_URL/g, "images/products/" + product_details[3]);
+
+    // adding created product card to images div 
+    $("#image-list").append(image_div);
+    $("#thumbnail-list").append(thumbnail_div);
 
     // looping through product json and adding product card to div 
     $.each(product_list, function(index, value) {
         // creating product image url for product's first image
-        product_url = "./image_display/" + product_name + "/" + value;
+        product_url = "images/products/" + value;
 
         //sample product card with placeholders
         var image_div = `
-        <div class="w3-card-4" style=" width: 20vh; height:26vh;float: left;margin-left: 1%;">
-            <img src=" PRODUCT_URL " style="width: 20vh; height:20vh">
-            <div class="w3-container w3-center">
-                <p>PRODUCT_NAME</p>
+            <div class="tab-pane" id="PRODUCT_ID">
+                <a href="PRODUCT_URL" class="image-popup">
+                    <img src="PRODUCT_URL" class="img-fluid" alt="Colorlib Template"> </a>
             </div>
-        </div>
-        `
-            // replacing values inside sample product card
-        image_div = image_div.replace(/PRODUCT_NAME/g, product_name);
+            `;
+
+        var thumbnail_div = `
+            <li>
+                <a data-target="#PRODUCT_ID" data-toggle="tab"><img src="PRODUCT_URL" alt="#" /></a>
+            </li>
+            `;
+
+        // replacing values inside sample product card
+        image_div = image_div.replace(/PRODUCT_ID/g, value);
         image_div = image_div.replace(/PRODUCT_URL/g, product_url);
+
+        thumbnail_div = thumbnail_div.replace(/PRODUCT_ID/g, value);
+        thumbnail_div = thumbnail_div.replace(/PRODUCT_URL/g, product_url);
+
 
         // adding created product card to images div 
         $("#image-list").append(image_div);
+        $("#thumbnail-list").append(thumbnail_div);
 
     });
 
